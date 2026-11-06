@@ -40,7 +40,8 @@ crud-mvp-storage/
 ```
 ---
 
->>> Como Executar o Projeto <<<
+>>> Como Executar o Projeto
+
 📍 Pré-requisitos
 Certifique-se de ter o Node.js e o pnpm instalados na sua máquina. Caso não tenha o pnpm, você pode instalá-lo via npm globalmente:
 
@@ -51,7 +52,8 @@ Certifique-se de ter o Node.js e o pnpm instalados na sua máquina. Caso não te
 
 ---
 
->>> Status do Projeto <<<
+>>> Status do Projeto
+
 ⚠️ Em Desenvolvimento: As funcionalidades de CRUD de animes estão operacionais. A funcionalidade de exibição e gerenciamento de capas está em processo de implementação.
 
 
