@@ -37,7 +37,7 @@ crud-mvp-storage/
 ├── api.json                 # Banco de dados simulado para o json-server
 ├── package.json
 └── pnpm-lock.yaml
-
+```
 ---
 
 >>> Como Executar o Projeto <<<
