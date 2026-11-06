@@ -1,0 +1,223 @@
+* {
+    color: rgb(53, 53, 78);
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin:0 auto;
+    padding:0;
+}
+
+body {
+    background-color: rgb(192, 193, 212);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0 0 15px 0;
+    text-align: center;
+    color: blue;
+    font-size: 4rem;
+}
+
+#btn-novo {
+    margin-top: 50px;
+    padding: 10px 40px;
+    background-color: rgb(75, 70, 115);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#btn-novo:hover {
+    background-color: rgb(53, 53, 78);
+}
+
+#btn-novo:active {
+    transform: scale(0.98);
+}
+
+dialog {
+    border: 2px solid rgb(120, 116, 150);
+    background-color: rgb(184, 182, 206);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    position: fixed;
+    inset: 0;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+dialog form {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(140, 136, 170);
+    border-radius: 5px;
+    background-color: rgb(240, 240, 245);
+    font-size: 1rem;
+}
+
+#fim {
+    margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+    display: inline;
+    width: auto;
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 20rem;
+    padding: 10px;
+    border: 1px solid rgb(140, 136, 170);
+    border-radius: 5px;
+    background-color: rgb(240, 240, 245);
+    font-size: 1rem;
+    resize: vertical;
+}
+
+#btn-salvar, #btn-fechar {
+    display: inline-block;
+    width: 48%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#btn-salvar {
+    background-color: rgb(75, 70, 115);
+    color: white;
+    margin-right: 4%;
+}
+
+#btn-salvar:hover {
+    background-color: rgb(53, 53, 78);
+}
+
+#btn-fechar {
+    background-color: rgb(151, 147, 179);
+    color: rgb(53, 53, 78);
+}
+
+#btn-fechar:hover {
+    background-color: rgb(135, 131, 163);
+}
+
+#btn-salvar:active, #btn-fechar:active {
+    transform: scale(0.98);
+}
+
+table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    background-color: rgb(184, 182, 206);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgb(151, 147, 179);
+}
+
+th {
+    background-color: rgb(140, 136, 170);
+    color: white;
+}
+
+.remover, .editar {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.remover:hover, .editar:hover {
+    background-color: rgb(151, 147, 179);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(176, 174, 201); 
+}
+
+#capa {
+    margin-top: 20px;
+}
+
+
+output {
+    display: block;
+    background-color: rgb(220, 100, 100); 
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+output:not(:not(:empty)) {
+    display: none;
+}

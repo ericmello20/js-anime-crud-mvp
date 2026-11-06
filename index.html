@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧌 Animes 🧟</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="./src/index.js" type="module"></script>
+</head>
+<body>
+    <h1>🧌 Animes 🧟</h1>
+    <button id="btn-novo">Novo</button>
+    <dialog>
+        <form method="dialog">
+            <input type="hidden" id="id" value="">
+
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" minlength="1" maxlength="30" required>
+           
+            <label for="temporadas">Temporadas: </label>
+            <input type="number" id="temporadas" min="0" max="50" required>
+
+            <label for="episodios">Episodios: </label>
+            <input type="number" id="episodios" min="0" max="5000" required>
+           
+            <label for="lancamento">Lançamento: </label>
+            <input type="date" id="lancamento" required>
+
+            <label for="fim">Fim: </label>
+            <input type="date" id="fim">
+            <input type="checkbox" id="andamento" value="andamento"><label for="andamento">Em Andamento</label>
+
+            <label for="sinopse" style="display:block">Sinopse: </label>
+            <textarea id="sinopse" required></textarea>
+
+            <button id="btn-salvar">Salvar</button>
+            <button id="btn-fechar">Fechar</button>
+        </form>
+    </dialog>
+    <output></output>
+
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nome</th>
+                <th>Temporadas</th>
+                <th>Episodios</th>
+                <th>Lançamento</th>
+                <th>Fim</th>
+                <th>Sinopse</th>
+                <th>Alterar</th>
+                <th>Remover</th>
+                <th>Capa</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="capa"></div>
+</body>
+</html>
