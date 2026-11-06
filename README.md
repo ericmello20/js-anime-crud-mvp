@@ -6,10 +6,10 @@
 
 ## 🛠️ Tecnologias e Ferramentas
 
-* **Linguagem:** JavaScript (ES6+) / HTML5 / CSS3
-* **Arquitetura:** Model-View-Presenter (MVP)
-* **Gerenciador de Pacotes:** [pnpm](https://pnpm.io/)
-* **API Mockada:** `json-server` (para simular uma API RESTful)
+- **Linguagem:** JavaScript (ES6+) / HTML5 / CSS3
+- **Arquitetura:** Model-View-Presenter (MVP)
+- **Gerenciador de Pacotes:** [pnpm](https://pnpm.io/)
+- **API Mockada:** `json-server` (para simular uma API RESTful)
 
 ---
 
@@ -17,16 +17,16 @@
 
 O projeto segue rigorosamente a separação de camadas do padrão **MVP**, garantindo alta modularidade, facilidade de manutenção e testes:
 
-
+```text
 crud-mvp-storage/
 ├── node_modules/
 ├── src/
 │   ├── model/
-│   │   ├── api/
-│   │   ├── anime.js         # Entidade / Validacao de dados
+│   │   ├── api/             # Comunicação com o servidor / fetch
+│   │   ├── anime.js         # Entidade / Validação de dados
 │   │   ├── repository-animes.js
 │   │   ├── repository-capas.js
-│   │   └── storage.js
+│   │   ├── storage.js
 │   │   └── validacao-error.js
 │   ├── presenter/
 │   │   └── presenter-animes.js # Orquestrador entre View e Model
