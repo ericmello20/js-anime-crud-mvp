@@ -1,6 +1,7 @@
 import { RepositoryAnimes } from "../model/repository/repository-animes.js";
 import { RepositoryCapas } from "../model/repository/repository-capas.js";
 import { ServiceAnimes } from "../model/service/service-animes.js";
+import { StorageCapas } from "../model/storage/storage-capas.js";
 export class PresenterAnimes{
     
     #serviceAnime = null;
@@ -8,7 +9,7 @@ export class PresenterAnimes{
 
     constructor(view){
         this.#view = view;
-        this.#serviceAnime = new ServiceAnimes( new RepositoryAnimes());
+        this.#serviceAnime = new ServiceAnimes( new RepositoryAnimes(), new RepositoryCapas(), new StorageCapas());
     }
 
     async listarAnimes(){
@@ -99,6 +100,18 @@ export class PresenterAnimes{
             this.#view.openModal();
         }catch(erro){
             this.#view.exibirErro(erro.message);
+        }
+    }
+    
+    async getPosterByName(nome){
+        const capaEncontrada = this.#serviceAnime.getStorageCapas().find(c => c?.nome && c.nome.toLowerCase() === nome.toLowerCase());
+        if(capaEncontrada) return capaEncontrada.url;
+        try{
+            const url = await this.#serviceAnime.getPosterByName(nome);
+            this.#serviceAnime.setStorageCapas({nome, url});
+            return url;
+        }catch(erro){
+            return erro.message;
         }
     }
 }

@@ -1,22 +1,22 @@
 {
   "animes": [
     {
-      "id": "1",
-      "nome": "Naruto Clássico",
-      "temporadas": 9,
-      "episodios": 220,
+      "nome": "Naruto",
+      "temporadas": "30",
+      "episodios": "720",
       "lancamento": "03/10/2002",
-      "fim": "08/02/2007",
-      "sinopse": "A história de Naruto acompanha Naruto Uzumaki, um jovem órfão da Aldeia da Folha (Konoha) que carrega selado em seu corpo a temida Raposa de Nove Caudas (Kurama), um monstro que quase destruiu a vila no dia do seu nascimento. Isolado e desprezado pela maioria dos habitantes, ele cresce com um grande sonho: tornar-se o Hokage, o líder máximo e o ninja mais forte de Konoha, para finalmente ganhar o respeito e o reconhecimento de todos."
+      "fim": "23/03/2017",
+      "sinopse": "A história de Naruto acompanha Naruto Uzumaki, um jovem órfão da Aldeia da Folha (Konoha) que carrega selado em seu corpo a temida Raposa de Nove Caudas (Kurama), um monstro que quase destruiu a vila no dia do seu nascimento. Isolado e desprezado pela maioria dos habitantes, ele cresce com um grande sonho: tornar-se o Hokage, o líder máximo e o ninja mais forte de Konoha, para finalmente ganhar o respeito e o reconhecimento de todos.",
+      "id": "1"
     },
     {
-      "id": "2",
       "nome": "Solo Leveling",
-      "temporadas": 1,
-      "episodios": 12,
+      "temporadas": "2",
+      "episodios": "25",
       "lancamento": "06/01/2024",
       "fim": "em andamento",
-      "sinopse": "Solo Leveling acompanha Sung Jinwoo, o caçador de Rank E mais fraco do mundo. Em um universo onde portais com monstros surgiram e pessoas despertaram habilidades mágicas, os caçadores não conseguem aumentar de nível após o despertar inicial — mas Jinwoo é a única exceção."
+      "sinopse": "Solo Leveling acompanha Sung Jinwoo, o caçador de Rank E mais fraco do mundo. Em um universo onde portais com monstros surgiram e pessoas despertaram habilidades mágicas, os caçadores não conseguem aumentar de nível após o despertar inicial — mas Jinwoo é a única exceção.",
+      "id": "2"
     },
     {
       "id": "3",
@@ -44,6 +44,33 @@
       "fim": "31/01/1996",
       "sinopse": "Cinco anos após os eventos de Dragon Ball, Goku descobre que é um saiyajin e deve defender a Terra contra ameaças do espaço sideral, acompanhado pelos seus amigos.",
       "id": "qjhPxPECsJM"
+    },
+    {
+      "nome": "Pokemon",
+      "temporadas": "28",
+      "episodios": "1360",
+      "lancamento": "27/02/1996",
+      "fim": "em andamento",
+      "sinopse": "Pokémon é uma franquia de mídia japonesa criada por Satoshi Tajiri, Junichi Masuda e Ken Sugimori em 1996. O universo gira em torno de criaturas chamadas Pokémon, que possuem poderes especiais e coexistem com os seres humanos, que as capturam e treinam para batalhas.",
+      "id": "94AERSaIf3s"
+    },
+    {
+      "nome": "Black Clover",
+      "temporadas": "2",
+      "episodios": "175",
+      "lancamento": "03/10/2017",
+      "fim": "em andamento",
+      "sinopse": "Em um mundo onde a magia é tudo, Asta nasce sem nenhuma gota de poder mágico. Para provar sua força e realizar seu sonho de se tornar o Rei Mago, ele e seu rival Yuno entram para os Cavaleiros Mágicos.",
+      "id": "2KskMVri5Po"
+    },
+    {
+      "nome": "Beyblade",
+      "temporadas": "1",
+      "episodios": "51",
+      "lancamento": "08/01/2001",
+      "fim": "29/12/2001",
+      "sinopse": "Uma história sobre jovens competidores que lutam usando piões customizados equipados com criaturas sagradas conhecidas como Feras-Bit.",
+      "id": "elQ1k91XScc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

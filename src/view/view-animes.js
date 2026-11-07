@@ -21,10 +21,13 @@ export class ViewAnimes{
             this.openModal();
         });
 
-        document.getElementById('btn-fechar').addEventListener('click', (event) =>{
+        document.addEventListener('click', (event) => {
+            const btnFechar = event.target.closest('.fechar');
+            if (!btnFechar) return; 
             event.preventDefault();
-            this.#presenter.limparForm();
-            this.closeModal();
+            const modal = btnFechar.closest('dialog');
+            if (modal) modal.close();
+            if (btnFechar.id === 'btn-fechar-form') this.#presenter.limparForm();
         });
     }
 
@@ -92,15 +95,16 @@ export class ViewAnimes{
         document.getElementById('sinopse').value = sinopse;
     }
 
-    desenharTabela( animes ){
+    async desenharTabela( animes ){
         const tbody = document.querySelector('tbody');
         const frag = document.createDocumentFragment();
         tbody.replaceChildren();
-        frag.append(...animes.map(a => this.#criarLinhas(a)));
+        frag.append(...(await Promise.all(animes.map(a => this.#criarLinhas(a)))));
         tbody.append(frag);
     }
 
-    #criarLinhas({id, nome, temporadas, episodios, lancamento, fim, sinopse}){
+    async #criarLinhas({id, nome, temporadas, episodios, lancamento, fim, sinopse}){
+        const url = await this.#presenter.getPosterByName(nome);
         return this.#criarCelula('tr',
             this.#criarCelula('td', id),
             this.#criarCelula('td', nome),
@@ -110,8 +114,34 @@ export class ViewAnimes{
             this.#criarCelula('td', fim),
             this.#criarCelula('td', sinopse),
             this.#criarCelula('td', this.#criarBotaoEditar()),
-            this.#criarCelula('td', this.#criarBotaoRemover())
+            this.#criarCelula('td', this.#criarBotaoRemover()),
+            this.#criarCelula('td', this.#criarBotaoExpandir(this.#criarImg(nome, url)))
         );
+    }
+
+    #criarBotaoExpandir(elemento){
+        const btn = document.createElement('button');
+        btn.id = 'btn-expandir';
+        btn.type = 'button';
+        btn.append(elemento);
+        const urlCapa = elemento.src; 
+        btn.addEventListener('click', () => this.#expandir(urlCapa));
+        return btn;
+    }
+
+    #expandir(urlCapa){
+        const modal = document.querySelector('#modal-capa');
+        const imgModal = document.querySelector('#img-modal-zoom');
+        imgModal.src = urlCapa;
+        modal.showModal();  
+    }
+
+    #criarImg(nome, url){
+        const img = document.createElement('img');
+        img.width = 100;
+        img.src = url;
+        img.alt = nome;
+        return img;
     }
 
     #criarBotaoRemover(){
@@ -139,11 +169,11 @@ export class ViewAnimes{
     }
 
     openModal(){
-        document.querySelector('dialog').showModal();
+        document.querySelector('#modal-form').showModal();
     }
 
     closeModal(){
-        document.querySelector('dialog').close();
+        document.querySelector('#modal-form').close();
     }
 
     #buscarId(event){

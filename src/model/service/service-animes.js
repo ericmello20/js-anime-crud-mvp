@@ -1,10 +1,12 @@
-import { Anime } from "../anime.js";
 export class ServiceAnimes{
 
     #repositoryAnimes;
-
-    constructor(repositoryAnimes, repositoryCapas){
+    #repositoryCapas;
+    #storage;
+    constructor(repositoryAnimes, repositoryCapas, storage){
         this.#repositoryAnimes = repositoryAnimes;
+        this.#repositoryCapas = repositoryCapas;
+        this.#storage = storage;
     }
 
     async getAnimes(){
@@ -50,6 +52,18 @@ export class ServiceAnimes{
     getDataInternacional( data ){
         const [dia, mes, ano] = data.split('/');
         return `${ano}-${mes}-${dia}`;
+    }
+
+    async getPosterByName(nome){
+        return await this.#repositoryCapas.getPosterByName(nome);
+    }
+
+    getStorageCapas(){
+        return this.#storage.storage;
+    }
+
+    setStorageCapas(capa){
+        this.#storage.storage = capa;
     }
 }
 
