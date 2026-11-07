@@ -54,6 +54,6 @@ Certifique-se de ter o Node.js e o pnpm instalados na sua máquina. Caso não te
 
 >>> Status do Projeto
 
-⚠️ Em Desenvolvimento: As funcionalidades de CRUD de animes estão operacionais. A funcionalidade de exibição e gerenciamento de capas está em processo de implementação.
+⚠️ Em Desenvolvimento: As funcionalidades de CRUD de animes estão operacionais. A funcionalidade de exibição e gerenciamento de capas está finalizado. A funcionalidade de salvar no storage está quase finalizada, apenas falta a atualização do nome da capa no storage em caso de atualização de nome do anime.
 
 
